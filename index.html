@@ -17,7 +17,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/site.js" defer></script>
+    <script src="scripts/site.js"></script>
     <title>Frontend Mentor | Expenses chart component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -34,10 +34,26 @@
       </header>
       <article>
         <section class="spending-graph">
-          Spending - Last 7 days mon tue wed thu fri sat sun
+          <h2 class="graph-heading">Spending - Last 7 days</h2>
+          <article class="bar-graph">
+            <div>mon</div>
+            <div>tue</div>
+            <div>wed</div>
+            <div>thu</div>
+            <div>fri</div>
+            <div>sat</div>
+            <div>sun</div>
+          </article>
         </section>
         <section class="summary">
-          Total this month $478.33 +2.4% from last month
+          <div class="summary-left">
+            <h3 class="summary-heading">Total this month</h3>
+            <div class="summary-total">$478.33</div>
+          </div>
+          <div class="summary-right">
+            <div class="summary-increase">+2.4%</div>
+            <h3 class="summary-heading">from last month</h3>
+          </div>
         </section>
       </article>
     </main>
