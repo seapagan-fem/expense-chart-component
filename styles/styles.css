@@ -1,5 +1,75 @@
+/* ----------------------------- add some resets ---------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 400;
+}
+
+/* --------------------------- fonts and variables -------------------------- */
+
+:root {
+  /* primary colors */
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* neutral colors */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+
+  /* fonts */
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: var(--cream);
+  padding: 67px 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--soft-red);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+header img {
+  width: 60px;
+}
+
+.balance-heading {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.balance-total {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+section {
+  background-color: var(--very-pale-orange);
+}
+
+/* -------------------------- style the artibution -------------------------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
