@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/dynamic-graphs-from-a-json-file-with-animated-tooltips-vanilla-js-hkUR9h8XWK)
 - Live Site URL: [GitHub Pages](https://seapagan-fem.github.io/expense-chart-component/)
 
 ## My process
@@ -56,20 +56,20 @@ graph dynamically and am quite chuffed with the custom animated tooltips too.
 To get the max value of the data, we cant use `Math.max()` directly as it is an
 array of objects, so I mapped over the spread of the data :
 
-```
+```javascript
 maxSpend = Math.max(...data.map((day) => day.amount));
 ```
 
 The max bar height was 150px in the Figma file, so I normalized each bar to that
 inside a string template :
 
-```
+```javascript
 spendBar.style.height = `${Math.round(150 * (amount / maxSpend))}px`;
 ```
 
 The day highlight is dynamically calculated from the actual current day.
 
-```
+```javascript
 const weekday = new Date()
   .toLocaleDateString("default", { weekday: "short" })
   .toLowerCase();
