@@ -1,5 +1,3 @@
-console.log("Javascript Loaded");
-
 const today = new Date();
 const weekday = today
   .toLocaleDateString("default", { weekday: "short" })
