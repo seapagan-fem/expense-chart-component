@@ -61,27 +61,44 @@ header img {
   font-size: 24px;
 }
 
-article {
+.graph-wrapper {
   background-color: var(--very-pale-orange);
   padding: 24px 20px;
   border-radius: 10px;
 }
 
 .spending-graph {
-  /* padding-bottom: 24px; */
   border-bottom: 2px solid var(--cream);
+  padding-bottom: 24px;
 }
 
 .graph-heading {
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 52px;
 }
 
 .bar-graph {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 12px;
+  align-items: end;
+}
+
+.spend-bar {
+  background-color: var(--soft-red);
+  border-radius: 3px;
+}
+
+.spend-bar.today {
+  background-color: var(--cyan);
+}
+
+.bar-axis {
   font-size: 12px;
   color: var(--medium-brown);
+  text-align: center;
+  padding-top: 11px;
 }
 
 .summary {
