@@ -1,5 +1,4 @@
-const today = new Date();
-const weekday = today
+const weekday = new Date()
   .toLocaleDateString("default", { weekday: "short" })
   .toLowerCase();
 
@@ -43,8 +42,8 @@ const getData = () => {
     .then((data) => {
       const graph = document.querySelector(".bar-graph");
       maxSpend = Math.max(...data.map((day) => day.amount));
-      data.map((day) => {
-        graph.append(createBar(day, maxSpend));
+      data.map((item) => {
+        graph.append(createBar(item, maxSpend));
       });
     });
 };
