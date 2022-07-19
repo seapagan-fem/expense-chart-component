@@ -19,6 +19,8 @@
   --cream: hsl(27, 66%, 92%);
   --very-pale-orange: hsl(33, 100%, 98%);
 
+  --bar-hover: hsl(10, 100%, 76%);
+
   /* fonts */
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
@@ -38,7 +40,7 @@ main {
   row-gap: 16px;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background-color: var(--soft-red);
@@ -47,7 +49,7 @@ header {
   color: white;
 }
 
-header img {
+.header img {
   width: 60px;
 }
 
@@ -87,7 +89,7 @@ header img {
 
 .spend-bar {
   background-color: var(--soft-red);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .spend-bar.today {
@@ -135,4 +137,59 @@ header img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 600px) {
+  body {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  main {
+    width: 540px;
+  }
+
+  .graph-wrapper {
+    padding: 32px 40px;
+  }
+
+  .graph-heading {
+    margin-bottom: 66px;
+  }
+
+  .bar-graph {
+    column-gap: 18px;
+  }
+
+  .spend-bar:hover {
+    cursor: pointer;
+  }
+
+  .spend-bar:not(.today):hover {
+    background-color: var(--bar-hover);
+  }
+
+  .bar-axis {
+    font-size: 15px;
+  }
+
+  .summary-heading,
+  .summary-increase {
+    font-size: 18px;
+  }
+
+  .summary-total {
+    font-size: 48px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 8px;
+  }
 }
