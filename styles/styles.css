@@ -87,6 +87,10 @@ main {
   align-items: end;
 }
 
+.tooltip {
+  display: none;
+}
+
 .spend-bar {
   background-color: var(--soft-red);
   border-radius: 5px;
@@ -129,7 +133,6 @@ main {
   font-weight: 400;
   color: var(--medium-brown);
 }
-
 /* -------------------------- style the artibution -------------------------- */
 .attribution {
   font-size: 11px;
@@ -155,12 +158,44 @@ main {
     width: 540px;
   }
 
+  .header {
+    padding: 26px 40px 26px 32px;
+  }
+
   .graph-wrapper {
     padding: 32px 40px;
   }
 
   .graph-heading {
     margin-bottom: 66px;
+  }
+
+  .bar-wrapper {
+    position: relative;
+  }
+
+  .tooltip {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    opacity: 0;
+    scale: 0;
+
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: 700;
+    background-color: black;
+    border-radius: 5px;
+    transform-origin: left;
+    transition: opacity 300ms ease-in-out, scale 300ms ease-in-out;
+  }
+
+  .bar-wrapper:hover .tooltip {
+    opacity: 1;
+    scale: 1;
   }
 
   .bar-graph {

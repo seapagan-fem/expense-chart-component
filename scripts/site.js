@@ -5,8 +5,6 @@ const weekday = today
   .toLocaleDateString("default", { weekday: "short" })
   .toLowerCase();
 
-console.log(weekday);
-
 const createBar = ({ day, amount }, maxSpend) => {
   bar = document.createDocumentFragment();
 
@@ -20,13 +18,19 @@ const createBar = ({ day, amount }, maxSpend) => {
   spendBar = document.createElement("div");
   spendBar.className = "spend-bar";
   if (day === weekday) {
+    // colour today differently
     spendBar.classList.add("today");
   }
+
+  toolTip = document.createElement("div");
+  toolTip.className = "tooltip";
+  toolTip.innerText = `$${amount}`;
 
   // we take 150px as being the largest bar, then normalize the other values to
   // this.
   spendBar.style.height = `${Math.round(150 * (amount / maxSpend))}px`;
 
+  barWrapper.append(toolTip);
   barWrapper.append(spendBar);
   barWrapper.append(dayName);
 
